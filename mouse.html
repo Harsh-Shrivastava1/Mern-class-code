@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Basic</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:#eef5fb;
+        }
+
+        h1{
+            margin-bottom:20px;
+        }
+
+        .box{
+            width:500px;
+            height:400px;
+            border:2px solid blue;
+            background:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:24px;
+            transition:0.3s;
+        }
+
+        .hover{
+            background:lightyellow;
+        }
+
+        .clicked{
+            background:lightgreen;
+        }
+
+        .double-clicked{
+            background:lightblue;
+        }
+
+        p{
+            margin-top:15px;
+            font-size:18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Mouse Events</h1>
+
+<div class="box">
+    <p>Move, Click or Double Click Me!</p>
+</div>
+
+<p id="statusText">Status: No event yet</p>
+<p id="coordinates">Coordinates: -</p>
+
+<script>
+
+let box = document.querySelector(".box");
+let statusText = document.querySelector("#statusText");
+let coordinateText = document.querySelector("#coordinates");
+
+box.addEventListener("mouseover", function(event){
+    box.classList.add("hover");
+    statusText.textContent = "Status: Mouse is over the box";
+    coordinateText.textContent =
+    `Coordinates: X: ${event.clientX}, Y: ${event.clientY}`;
+
+});
+
+box.addEventListener("mouseleave", function(){
+    box.classList.remove("hover");
+    statusText.textContent = "Status: Mouse left the box";
+    coordinateText.textContent = "Coordinates: -";
+
+});
+
+box.addEventListener("click", function(){
+    box.classList.remove("double-clicked");
+    box.classList.add("clicked");
+    statusText.textContent = "Status: Mouse Clicked";
+
+});
+
+box.addEventListener("dblclick", function(){
+    box.classList.remove("clicked");
+    box.classList.add("double-clicked");
+    statusText.textContent = "Status: Mouse Double Clicked";
+
+});
+
+</script>
+
+</body>
+</html>

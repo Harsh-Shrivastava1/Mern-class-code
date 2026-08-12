@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do List</title>
+  <link rel="stylesheet" href="to-do-list.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    
+    <div class="input-area">
+      <input id="task" placeholder="Enter task">
+      <button onclick="addTask()">Add</button>
+      <button onclick="addTaskTop()">Add to Top</button>
+      <button onclick="duplicateLast()">Duplicate Last</button>
+      <button onclick="removeLast()">Remove Last</button>
+      <button onclick="deleteall()">Remove All</button>
+    </div>
+    <ul id="todo"></ul>
+  </div>
+  <script src="to-do-list.js"></script>
+</body>
+</html>

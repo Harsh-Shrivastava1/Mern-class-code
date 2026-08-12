@@ -1,0 +1,53 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            color: white;
+        }
+
+        .main-container{
+            background-color: #222222;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-container{
+            background-color: #222222;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .item{
+            height: 40vh;
+            width: 100%;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-content{
+            text-align: center;
+            width: 35vw;
+            color: white;
+        }
+        .text-content h1{
+            font-size: 50px;
+            font-size: 900;
+            color: white;
+        }
+        .text-content h2{
+            font-size: 50px;
+            font-size: 900;
+            color: white;
+        }
+
+    

@@ -10,3 +10,5 @@ function isPangram(sentence) {
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog"));
 console.log(isPangram("blah blah blah ")); 
+console.log(isPangram("Pack my box with five dozen liquor jugs"));
+console.log(isPangram("dbhsbdvhbsjkdb"));
